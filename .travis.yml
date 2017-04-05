@@ -15,6 +15,9 @@ before_install:
   fi
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
+- echo "Test"
+- ls -la ${HOME}/google-cloud-sdk
+- echo "End of test"
 - gcloud auth activate-service-account --key-file client-secret.json
 install:
 - gcloud config set project ci-cd-with-travisci
